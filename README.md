@@ -97,6 +97,10 @@ the "latest" data by using a timestamp rather than a sequence number
 
 ### Frontend
 
+* TODO: https://github.com/murphye/hybrid-react-angular-spring-boot-apps
+* TODO: https://medium.com/@SumanthShankar/on-demand-login-with-keycloak-angular-4-5-ngrx-backend-api-bookmark-able-links-ecb065dc7993, https://github.com/mauriciovigolo/keycloak-angular, http://blog.keycloak.org/2018/02/keycloak-and-angular-cli.html
+* TODO: https://github.com/patternfly/patternfly-ng
+
 ### Security
 
 * TODO: (In Progress, PoC Completed) Single Sign-On (Keycloak) Integration
