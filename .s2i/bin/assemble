@@ -1,0 +1,55 @@
+#!/bin/bash
+set -eo pipefail
+
+S2I_SCRIPT_DIR="/usr/local/s2i"
+S2I_SOURCE_DIR="/tmp/src"
+
+function check_run {
+
+  if [ -f $S2I_SOURCE_DIR/$MODULE_DIR/.s2i/bin/run ]; then
+
+       echo "Custom run script found. Using this instead of the default."
+
+       mkdir -p /deployments/scripts/$MODULE_DIR/
+
+       cp $S2I_SOURCE_DIR/$MODULE_DIR/.s2i/bin/run /deployments/scripts/$MODULE_DIR/
+
+   else
+
+       echo "Using default run script"
+  fi
+}
+
+
+function check_assemble {
+   
+  if [ -f $S2I_SOURCE_DIR/$MODULE_DIR/.s2i/bin/assemble ]; then
+
+       echo "Custom assemble script found. Using this instead of the default."
+       $S2I_SOURCE_DIR/$MODULE_DIR/.s2i/bin/assemble
+
+   else
+
+    default_assemble
+  fi
+}
+
+function default_assemble {
+
+  echo "Using default assemble script"
+  $S2I_SCRIPT_DIR/assemble
+
+}
+
+echo "Checking for module-specific S2I scripts..."
+
+if [ x"$MODULE_DIR" != "x" ]; then
+
+  check_run
+  check_assemble
+
+else
+  
+  default_assemble  
+
+fi
