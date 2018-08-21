@@ -2,18 +2,18 @@ apiVersion: v1
 kind: Template
 metadata:
   creationTimestamp: null
-  name: multi-module-example
+  name: bookinfo-template
   
 parameters:
 - description: Git Source Repository
   name: SOURCE_REPOSITORY
-  value: https://github.com/benemon/multi-module-s2i-project
+  value: https://github.com/redhat-app-dev/bookinfo-spring-boot
   required: true
 - description: Git Source reference
   name: SOURCE_REF
   value: b1.0
   required: true
-- description: Country Service data directory
+- description: Bookinfo data directory
   name: DATA_DIRECTORY
   value: /deployments/data
   required: true
