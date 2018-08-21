@@ -107,10 +107,20 @@ the "latest" data by using a timestamp rather than a sequence number
 
 ### OpenShift S2I
 
-* TODO: Custom builder for multi-module Maven project
+* TODO: Custom builder for multi-module Maven project https://blog.openshift.com/maven-multi-module-projects-and-openshift
 
 
 ### OpenShift + Jenkins CI/CD
+
+* TODO: https://github.com/redhat-cop/container-pipelines/tree/master/multi-cluster-spring-boot
+* TODO: https://github.com/redhat-cop/container-pipelines/tree/master/blue-green-spring
+* TODO: https://github.com/redhat-cop/container-pipelines/tree/master/basic-spring-boot
+
+### Automated Testing
+
+* TODO: JUnit 5 tests
+* TODO: https://github.com/redhat-cop/container-pipelines/tree/master/cucumber-selenium-grid
+
 
 ### Istio
 
